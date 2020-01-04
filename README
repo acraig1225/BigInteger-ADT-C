@@ -1,0 +1,81 @@
+/********************************************************************************************************************
+*	File: README
+*	Name: Andrew Craig
+*	CruzID: acraig1
+*	Assignment: pa3
+*********************************************************************************************************************/
+
+
+/********************************************************************************************************************
+*											   List ADT
+*********************************************************************************************************************/
+
+Description: The purpose of the List ADT is to implement a doubly linked list that stores longs. Keeps track of
+			 the location of the front of the list, the back of the list, and a cursor that has the ability to
+			 traverse the list at will.
+			 
+			 Contains the following functions: 
+			 		* Constructors and destructors to create new lists and destory old ones.
+			 		* Access functions to retrive data on the current list or to find the current position of 
+			 		  the cursor.
+			 		* Manipulation procedures to add or remove elements from the current list and to change
+			 		  the location of the cursor.
+			 		* Misc. operations to print, copy, or concatenate a list.
+
+/********************************************************************************************************************
+*											   BigInteger ADT
+*********************************************************************************************************************/
+
+Description: The purpose of the BigInteger ADT is to create an object that can handle operations on numbers that
+			 are too big for even long to store. The underlying structure of the BigInteger ADT is a List of longs
+			 where is long is a digit of the number being stored. The size of each digit is determined by a static 
+			 value BASE which is 10^p where 0 <= p <= 9. BigInteger also stores an interger value to determine the
+			 sign of the stored number: 1 if positive, -1 if negative, and 0 if zero.
+			 
+			 Contains the following functions: 
+			 		* Constructors and destructors to create new BigIntegers and destory old ones.
+			 		* Access fucntions to retrieve the sign of a given BigInteger object.
+			 		* Comparison functions to determine if a BigInteger is greater than, less than, or equal to
+			 		  another BigInteger.
+			 		* Manipulation procedures to reset a BigInteger to the zero state or negate its sign.
+			 		* Arithmetic operations for addition, subtraction, and multiplication that can either place the 
+			 		  result of the operation in a new BigInteger or overwrite it into an existing BigInteger.
+			 		* Other operations that can create a new BigInteger object from a string, copy a BigInteger
+			 		  or print the base 10 representation of a BigInteger to filestream out.
+
+
+/********************************************************************************************************************
+*											Included Files
+*********************************************************************************************************************/
+
+1)	File: Arithmetic.c
+	Description: The client module for the BigInteger ADT. Reads the values of two numbers from a given input file and 
+				 uses the values to create two BigInteger objects. It then uses the BigInteger ADT to perform various
+				 arithmetic on these BigInteger objects, showcasing the capabilities of the BigInteger ADT.
+				 
+2)	File: BigInteger.c
+	Description: Implementation file for BigInteger ADT, containing struct and function definitions. Also contains the
+				 delcaration and implementation of the BigIntegerObj struct and its associated constructors and destructors. 
+
+3)	File: BigInteger.h
+	Description: Header file for BigInteger ADT, contains the typedef of the BigIntegerObj and prototypes of exported functions.
+
+4)	File: BigIntegerTest.c
+	Description: Test file for the BigInteger ADT to test the functions of BigInteger in isolation.
+
+5)	File: List.h
+	Description: Header file for List ADT, contains the typedef of the ListObj and prototypes of exported functions.
+
+6)	File: List.c
+	Description: Implementation file for List ADT, containing struct and function definitions. Also contains the
+				 delcaration and implementation of the NodeObj struct and its associated constructors and destructors.
+
+6)	File: ListTest.c
+	Description: Test file for the List ADT to test the functions of List in isolation.
+
+8)	File: Makefile
+	Description: Has the ability to create an executable binary files for Arithmetic.c, BigIntegerTest.c, and ListTest.c. Also 
+				 can remove any .o files associated with Arithmetic.c, BigIntegerTest.c, and ListTest.c once finished.
+
+9)	File: README
+	Description: Provides a brief description of each file its role in the project.
